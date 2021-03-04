@@ -20,7 +20,7 @@ public class CommandIP extends PlayerCommand
             sender.sendMessage( ProxyServer.getInstance().getTranslation( "username_needed" ) );
             return;
         }
-        ProxiedPlayer user = ProxyServer.getInstance().getPlayer( args[0] );
+        ProxiedPlayer user = ProxyServer.getInstance().tryGetPlayer( args[0] );
         if ( user == null )
         {
             sender.sendMessage( ProxyServer.getInstance().getTranslation( "user_not_online" ) );
